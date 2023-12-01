@@ -27,15 +27,19 @@ const torus = new THREE.Mesh( geometry, material );
 scene.add(torus)
 
 const pointLight = new THREE.PointLight(0x0000ff)
-
 pointLight.intensity = 2000
-
-pointLight.position.set(15,15,15)
+pointLight.position.set(5,7,15)
 
 const ambientLight = new THREE.AmbientLight(0xffffff)
-
+ambientLight.intensity = 2.5
 
 scene.add(pointLight,ambientLight)
+
+const lightHelper = new THREE.PointLightHelper(pointLight)
+
+const gridHelper = new THREE.GridHelper(200,50)
+
+scene.add(lightHelper, gridHelper)
 
 
 function animate() {

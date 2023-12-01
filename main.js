@@ -45,7 +45,7 @@ const gridHelper = new THREE.GridHelper(200,50)
 
 const controls = new OrbitControls(camera, renderer.domElement)
 
-const addStart = () => {
+const addStar = () => {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24)
 
   const material = new THREE.MeshStandardMaterial( {color: 0xffffff} )
@@ -56,9 +56,10 @@ const addStart = () => {
 
   star.position.set(x, y, z)
   
-  scene.add(start)
+  scene.add(star)
 }
 
+Array(200).fill().forEach(addStar)
 
 function animate() {
   requestAnimationFrame( animate );

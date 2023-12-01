@@ -34,10 +34,8 @@ pointLight.position.set(15,15,15)
 
 const ambientLight = new THREE.AmbientLight(0xffffff)
 
-ambientLight.intensity = 1
 
-scene.add(pointLight)
-scene.add(ambientLight)
+scene.add(pointLight,ambientLight)
 
 
 function animate() {
